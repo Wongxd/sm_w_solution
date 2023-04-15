@@ -3,6 +3,10 @@ package io.wongxd.solution.compose.composeTheme
 import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material.MaterialTheme
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.ReadOnlyComposable
 
 
 object AppThemeHolder {
@@ -31,5 +35,8 @@ object AppThemeHolder {
         preferences.edit().putInt(KEY_APP_THEME, appTheme.type).apply()
         currentTheme = appTheme
     }
+
+    var lightColor: ColorAsset = DefLightColorAsset
+    var darkColor: ColorAsset = DefDarkColorAsset
 
 }

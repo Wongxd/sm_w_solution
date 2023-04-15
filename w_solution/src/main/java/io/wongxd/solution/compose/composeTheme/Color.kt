@@ -82,9 +82,9 @@ interface ColorAsset {
         get() = Color(0x17868686)
 }
 
-object LightColorAsset : ColorAsset
+internal object DefLightColorAsset : ColorAsset
 
-object DarkColorAsset : ColorAsset {
+internal object DefDarkColorAsset : ColorAsset {
     override val bgBrush: Brush
         get() = Brush.verticalGradient(
             listOf(
@@ -162,9 +162,9 @@ val AppThemeHolder.colorAssets
     @Composable
     @ReadOnlyComposable
     get() = if (isSystemInDarkTheme())
-        DarkColorAsset
+        this.darkColor
     else
-        LightColorAsset
+        this.lightColor
 
 val MaterialTheme.colorAssets
     @Composable

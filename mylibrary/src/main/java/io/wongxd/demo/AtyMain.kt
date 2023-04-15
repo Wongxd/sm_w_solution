@@ -17,7 +17,7 @@ class AtyMain : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        AppThemeHolder.themeAdapterAuto = true
         setContent {
             Column(Modifier.fillMaxSize()) {
                 Box(
@@ -26,7 +26,7 @@ class AtyMain : AppCompatActivity() {
                         .background(AppThemeHolder.colorAssets.white),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text(text = "你好", style = AppThemeHolder.textStyle.sp20.white().bold())
+                    Text(text = "你好", style = AppThemeHolder.textStyle.sp20.black().bold())
                 }
             }
         }
