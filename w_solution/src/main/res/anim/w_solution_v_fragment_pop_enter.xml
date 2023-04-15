@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *************************************************************
+  ~ 文件：w_solution_v_fragment_pop_enter.xml  模块：photoEdit  项目：photoEdit
+  ~ 上次修改时间：2021年11月30日 17:58:03
+  ~ 作者：Wongxd
+  ~ Copyright (c) 2022  Wongxd
+  ~ *************************************************************
+  -->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:zAdjustment="normal">
+    <alpha android:fromAlpha="0.7" android:toAlpha="1.0"
+        android:fillEnabled="true" android:fillBefore="true" android:fillAfter="true"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:duration="250"/>
+</set>

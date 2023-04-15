@@ -1,0 +1,4 @@
+
+include ':w_solution'
+project(':w_solution').projectDir = new File('w_solution')
+

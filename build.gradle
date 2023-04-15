@@ -1,0 +1,53 @@
+buildscript {
+    ext.kotlin_version = '1.5.10'
+    repositories {
+        //https://maven.aliyun.com/mvn/view(摘自阿里云镜像仓库服务)
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/snapshots' }
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        //https://maven.aliyun.com/mvn/view(摘自阿里云镜像仓库服务)
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/snapshots' }
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+        google()
+        //新友盟添加仓库地址
+        maven { url 'https://repo1.maven.org/maven2/' }
+        //华为广告
+        maven { url 'https://developer.huawei.com/repo/' }
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+ext {
+    ext.compile_sdk_version = 30
+    ext.build_tools_version = "30.0.2"
+    ext.min_sdk_version = 21
+    ext.target_sdk_version = 29
+    ext.android_support_version = "29.0.0"
+    ext.retrofit_version = '2.4.0'
+    ext.glide_version = "4.9.0"
+}
+
