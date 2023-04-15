@@ -11,9 +11,14 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import io.wongxd.solution.camera.CameraCompose
+import io.wongxd.solution.camerax.CameraXCompose
+import io.wongxd.solution.camerax.CameraXHolder
 import io.wongxd.solution.compose.composeTheme.*
 
 class AtyMain : AppCompatActivity() {
+
+    private val cameraXHolder by lazy { CameraXHolder() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +31,9 @@ class AtyMain : AppCompatActivity() {
                         .background(AppThemeHolder.colorAssets.white),
                     contentAlignment = Alignment.Center
                 ) {
+
+                    CameraXCompose(cameraXHolder = cameraXHolder, openBack = false)
+
                     Text(text = "你好", style = AppThemeHolder.textStyle.sp20.black().bold())
                 }
             }

@@ -26,7 +26,7 @@ import io.wongxd.solution.permission.core.rememberPermissionState
 @Composable
 fun CameraXCompose(
     cameraXHolder: CameraXHolder,
-    openBack: Boolean = true,
+    openBack: Boolean = false,
     afterCameraGet: () -> Unit = {}
 ) {
 
